@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">НМедиа</string>
+    <string name="show_me">НМедиа!</string>
+    <string name="description_post_author_avatar">Логотип Нетологии</string>
+    <string name="description_post_menu">Меню поста</string>
+    <string name="description_likes">Количество лайков</string>
+    <string name="description_views">Количество просмотров</string>
+    <string name="description_shared">Количество поделившихся</string>
+    <string name="remove_post">Удалить пост</string>
+    <string name="new_post">Создать новый пост</string>
+    <string name="description_create_new_post">Добавить новый пост</string>
+    <string name="empty_content">Содержание поста не может быть пустым!</string>
+    <string name="edit_post">Редактировать пост</string>
+    <string name="description_cancel_edit">Отменить редактирование</string>
+    <string name="error_empty_content">Содержание поста пусто!</string>
+    <string name="show_post">Здесь появится пост…</string>
+    <string name="chooser_share_post">Выберите, куда бы Вы хотели расшарить пост</string>
+    <string name="complete_sharing">Ваш шаринг прошел успешно</string>
+    <string name="new_post_has_created">Новый пост успешно создан</string>
+    <string name="post_has_edited">Пост успешно изменен</string>
+    <string name="description_attachments">Вложения</string>
+    <string name="description_attachment_preview">Воспроизвести</string>
+    <string name="description_play">Воспроизвести</string>
+</resources>
