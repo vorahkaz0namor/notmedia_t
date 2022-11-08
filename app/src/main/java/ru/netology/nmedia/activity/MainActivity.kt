@@ -14,6 +14,17 @@ import ru.netology.nmedia.databinding.ActivityMainBinding
 import ru.netology.nmedia.viewmodel.PostViewModel
 
 const val PREVIEW_KEY = "preview"
+const val TAG = "stuff"
+val message = listOf(
+    "root",
+    "avatar",
+    "like",
+    "share",
+    "attachments",
+    "menu",
+    "remove",
+    "edit"
+)
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
@@ -23,10 +34,23 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        /*Без использования инструмента ViewBinding верстка помещается на Активити вот так:
+        setContentView(R.layout.activity_main)
+        А уже с использованием ViewBinding, вот так:*/
         setContentView(binding.root)
         initViews()
         subscribe()
         setupListeners()
+        /* Из вебинара "Constrained Layout":
+           Accessibility - чтобы экран был доступен для лиц с ограниченными возможностями.
+           Здесь указывается текст, который будет описывать содержимое изображения.
+           => android:contentDescription <= Это прописывается в файле верстки.
+           ellipsize - это свойство, указывающее в каком месте текст должен обрезаться,
+           если он не входит в размер контейнера (начало, конец или середина).
+           По умолчанию -> android:ellipsize="end".
+           Чтобы избежать обрезания имени автора сверху при маленьком размере аватарки,
+           следует указать привязку для аватарки в виде:
+           app:layout_constraintBottom_toBottomOf="@id/barrierTop".*/
     }
 
     private fun initViews() {

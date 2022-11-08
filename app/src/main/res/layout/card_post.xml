@@ -57,13 +57,35 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="avatar,published,menu" />
 
+    <ScrollView
+        android:id="@+id/post_text_container"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:paddingEnd="@dimen/indent"
+        android:isScrollContainer="true"
+        app:layout_constraintTop_toBottomOf="@id/barrierTop"
+        app:layout_constraintBottom_toTopOf="@id/barrierBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/content" >
+
+    <TextView
+        android:id="@+id/clickableProperty"
+        android:textSize="@dimen/prop_size"
+        tools:text="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/indent" />
+
+    </ScrollView>
+
     <TextView
         android:id="@+id/content"
-        android:layout_width="match_parent"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/indent"
         app:layout_constraintTop_toBottomOf="@id/barrierTop"
         app:layout_constraintBottom_toTopOf="@id/barrierBottom"
+        app:layout_constraintEnd_toEndOf="parent"
         android:autoLink="web"
         tools:text="@sample/posts.json/data/content" />
 

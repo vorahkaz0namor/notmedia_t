@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">NMedia</string>
-    <string name="show_me">NMedia!</string>
+    <string name="app_name">NotMediaT</string>
     <string name="description_post_author_avatar">Netology logo</string>
     <string name="description_post_menu">Post menu</string>
     <string name="description_likes">Likes count</string>
