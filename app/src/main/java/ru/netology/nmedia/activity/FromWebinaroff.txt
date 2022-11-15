@@ -1,0 +1,18 @@
+Без использования инструмента ViewBinding верстка помещается на Активити вот так:
+        setContentView(R.layout.activity_main)
+А уже с использованием ViewBinding, вот так:
+        setContentView(binding.root)
+
+Из вебинара "Constrained Layout":
+        Accessibility - чтобы экран был доступен для лиц с ограниченными возможностями.
+        Здесь указывается текст, который будет описывать содержимое изображения.
+        => android:contentDescription <= Это прописывается в файле верстки.
+        ellipsize - это свойство, указывающее в каком месте текст должен обрезаться,
+        если он не входит в размер контейнера (начало, конец или середина).
+        По умолчанию -> android:ellipsize="end".
+        Чтобы избежать обрезания имени автора сверху при маленьком размере аватарки,
+        следует указать привязку для аватарки в виде:
+        app:layout_constraintBottom_toBottomOf="@id/barrierTop".
+
+Создание делегата для viewBinding:
+        https://disk.yandex.ru/d/HHky6ykWLCGkdg

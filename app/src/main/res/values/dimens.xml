@@ -6,5 +6,5 @@
     <dimen name="zero_dp">0dp</dimen>
     <dimen name="post_hint">24sp</dimen>
     <dimen name="max_preview">320dp</dimen>
-    <dimen name="prop_size">10sp</dimen>
+    <dimen name="prop_size">8sp</dimen>
 </resources>

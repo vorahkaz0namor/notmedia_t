@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.NewPostActivity">
+    tools:context=".activity.NewPostFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/cancel_edit"
@@ -24,16 +24,16 @@
         app:layout_constraintBottom_toTopOf="@id/coordinator_bottom"
         >
 
-    <EditText
-        android:id="@+id/new_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:hint="@string/new_post"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
-        android:padding="@dimen/indent"
-        />
+        <EditText
+            android:id="@+id/new_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/new_post"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/indent"
+            />
 
     </ScrollView>
 
@@ -44,23 +44,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         >
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/save_this_post"
-        style="@style/Widget.AppTheme.FAB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/description_create_new_post"
-        app:layout_anchor="@id/bottomAppBar"
-        app:srcCompat="@drawable/ic_publish_post_24"
-        />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/save_this_post"
+            style="@style/Widget.AppTheme.FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/description_create_new_post"
+            app:layout_anchor="@id/bottomAppBar"
+            app:srcCompat="@drawable/ic_publish_post_24"
+            />
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        />
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

@@ -8,7 +8,7 @@ import ru.netology.nmedia.dto.Post
 class PostRepositorySharedPrefsImpl(
     context: Context
 ) : PostRepositoryInMemoryImpl() {
-    private val prefs = context.getSharedPreferences("repo", Context.MODE_PRIVATE)
+    private val prefs = context.getSharedPreferences("notmediarepo", Context.MODE_PRIVATE)
     private val gson = Gson()
     private val type = TypeToken.getParameterized(List::class.java, Post::class.java).type
     private val key = "posts"

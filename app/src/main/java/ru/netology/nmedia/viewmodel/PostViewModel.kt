@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import ru.netology.nmedia.dto.Post
 import ru.netology.nmedia.repository.*
+import ru.netology.nmedia.util.AndroidUtils
 
 private val empty = Post(
     id = 0,
@@ -22,6 +23,8 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
     val hasShared = MutableLiveData(empty)
     // Variable to hold viewing post attachments
     val viewingAttachments = MutableLiveData(empty)
+    // Variable to hold single post to view
+    val singlePostToView = MutableLiveData(empty)
 
     private fun validation(text: CharSequence?) =
         (!text.isNullOrBlank() && edited.value?.content != text.trim())
@@ -32,7 +35,7 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    private fun clearEditedValue() {
+    fun clearEditedValue() {
         edited.value = empty
     }
 
@@ -51,12 +54,24 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
 
     fun likeById(id: Long) = repository.likeById(id)
     fun shareById(post: Post) {
-        hasShared.value = post
-        repository.shareById(post.id)
+        hasShared.apply {
+            value = post
+            repository.shareById(post.id)
+            value = empty
+        }
     }
     fun showAttachments(post: Post) {
-        viewingAttachments.value = post
+        viewingAttachments.apply {
+            value = post
+            value = empty
+        }
     }
     fun viewById(id: Long) = repository.viewById(id)
     fun removeById(id: Long) = repository.removeById(id)
+    fun singlePost(post: Post) {
+        singlePostToView.apply {
+            value = post
+            value = empty
+        }
+    }
 }

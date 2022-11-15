@@ -22,6 +22,8 @@ class PostRepositoryFileImpl(
                     posts = gson.fromJson(it, type)
                     super.sync()
                 }
+            val totalPosts = posts.maxOfOrNull { it.id } ?: 0
+            nextId = totalPosts + 1
         } else
             sync()
     }
