@@ -1,7 +1,7 @@
 package ru.netology.nmedia.dto
 
 data class Post(
-    val id: Long,
+    override val id: Long,
     val author: String,
     val published: String,
     val content: String,
@@ -10,4 +10,4 @@ data class Post(
     val shares: Int = 0,
     val views: Int = 0,
     val attachments: List<Attachment> = emptyList()
-)
+) : FeedItem

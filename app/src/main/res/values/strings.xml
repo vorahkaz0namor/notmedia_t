@@ -17,6 +17,7 @@
     <string name="post_has_edited">The post has edited successfully</string>
     <string name="show_post">Here will be appear the post…</string>
     <string name="chooser_share_post">Choose where you want to share the post</string>
+    <string name="clickable_properties" translatable="false">author=%1$b\npublished=%2$b\ncontent=%3$b\navatar=%4$b\nmenu=%5$b\nlikes=%6$b\nshares=%7$b\nviews=%8$b\nattachments=%9$b\nthis=%10$b</string>
     <string name="description_attachments">Attachments</string>
     <string name="description_attachment_preview">@string/description_play</string>
     <string name="description_play">Play attachment</string>

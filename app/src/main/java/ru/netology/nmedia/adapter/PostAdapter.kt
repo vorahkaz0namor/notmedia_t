@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import ru.netology.nmedia.databinding.CardPostBinding
+import ru.netology.nmedia.dto.Payload
 import ru.netology.nmedia.dto.Post
 
 class PostAdapter(
@@ -21,4 +22,20 @@ class PostAdapter(
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) =
         holder.bind(getItem(position))
+
+    override fun onBindViewHolder(
+        holder: PostViewHolder,
+        position: Int,
+        payloads: List<Any>
+    ) {
+        if (payloads.isEmpty())
+            onBindViewHolder(holder, position)
+        else {
+            payloads.forEach {
+                (it as? Payload)?.let {
+                    holder.bind(it)
+                }
+            }
+        }
+    }
 }
